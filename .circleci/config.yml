@@ -9,4 +9,4 @@ jobs:
       only:
         - master
     steps:
-      - run: make
+      - run: npm run start
