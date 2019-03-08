@@ -9,5 +9,4 @@ jobs:
       only:
         - master
     steps:
-      - run: make test
       - run: make
