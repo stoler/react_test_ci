@@ -1,7 +1,8 @@
 version: 0.1
-executors: machine
 jobs:
   build:
+    docker:
+      - image: buildpack-deps:trusty
     parallelism: 3
     resource_class: large
     branches:
