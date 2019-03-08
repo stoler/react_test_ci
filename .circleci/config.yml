@@ -9,4 +9,6 @@ jobs:
       only:
         - master
     steps:
-      - run: npm run start
+      - run: rm -rf ./node_modules
+      - run: npm i
+      - run: npm run build
