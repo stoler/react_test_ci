@@ -1,0 +1,11 @@
+version: 0.1
+jobs:
+  build:
+    parallelism: 3
+    resource_class: large
+    branches:
+      only:
+        - master
+    steps:
+      - run: make test
+      - run: make
