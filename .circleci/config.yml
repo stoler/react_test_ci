@@ -11,4 +11,5 @@ jobs:
     steps:
       - run: rm -rf ./node_modules
       - run: npm i
+      - run: ls
       - run: npm run build
