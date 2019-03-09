@@ -16,6 +16,8 @@ jobs:
       - run: npm i
       - run: npm run build
   deploy:
+    docker:
+      - image: circleci/node:10
     steps:
       - checkout
       - run:
