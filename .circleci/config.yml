@@ -16,4 +16,7 @@ jobs:
       - run: rm -rf ./node_modules
       - run: npm i
       - run: npm run build
+workflows:
+  heroku_deploy:
+    jobs:
       - heroku/deploy-via-git
