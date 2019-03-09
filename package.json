@@ -13,7 +13,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "start": "npm run build node ./server.js"
+    "server": "node ./server.js",
+    "start": "npm run build"
   },
   "devDependencies": {
     "express": "^4.16.4",
