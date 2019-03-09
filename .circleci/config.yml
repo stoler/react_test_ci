@@ -1,4 +1,6 @@
-version: 0.1
+version: 0.17
+orbs:
+  heroku: circleci/heroku@1.0.0
 jobs:
   build:
     docker:
@@ -14,3 +16,4 @@ jobs:
       - run: rm -rf ./node_modules
       - run: npm i
       - run: npm run build
+      - heroku/deploy-via-git
