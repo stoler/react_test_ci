@@ -1,6 +1,12 @@
 version: 0.17
 orbs:
   heroku: circleci/heroku@1.0.0
+
+workflows:
+  heroku_deploy:
+    jobs:
+      - heroku/deploy-via-git
+
 jobs:
   build:
     docker:
@@ -16,7 +22,9 @@ jobs:
       - run: rm -rf ./node_modules
       - run: npm i
       - run: npm run build
-workflows:
-  heroku_deploy:
-    jobs:
-      - heroku/deploy-via-git
+  steps:
+    - checkout
+    - run:
+        name: Deploy Master to Heroku
+        command: |
+          git push https://heroku:d4f9d9c1-01a7-484b-9256-7fecb28606fd@git.heroku.com/react-test-ci.git master
