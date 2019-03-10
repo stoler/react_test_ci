@@ -8,8 +8,6 @@ jobs:
     branches:
       only:
         - master
-      ignore:
-        - master
     steps:
       - checkout
       - attach_workspace:
@@ -17,4 +15,9 @@ jobs:
       - run: rm -rf ./node_modules
       - run: npm i
       - run: npm run build
+    deployment:
+      staging:
+        branch: master
+        heroku:
+          appname: react-test-ci
 
