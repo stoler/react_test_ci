@@ -2,7 +2,7 @@
   "name": "react-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://localhost:5000/build/",
+  "homepage": "http://localhost:3000/build/",
   "dependencies": {
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
