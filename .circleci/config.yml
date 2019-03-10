@@ -13,8 +13,15 @@ jobs:
       - attach_workspace:
           at: .
       - run: rm -rf ./node_modules
+      - run: rm -rf ./build
+      - run: rm -rf ./package-lock.json
       - run: npm i
       - run: npm run build
-      - run: |
-          git push https://heroku:d4f9d9c1-01a7-484b-9256-7fecb28606fd@git.heroku.com/react-test-ci.git master
+      - run: git checkout master
+      - run: git commit -am "deploy"
+      - run: git push origin master
+    staging:
+      branch: master
+      heroku:
+        appname: react-test-ci
 
