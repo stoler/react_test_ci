@@ -9,12 +9,12 @@
     "react-scripts": "1.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "old_start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "server": "node ./server.js",
-    "old_start": "npm run server"
+    "start": "npm run server"
   },
   "devDependencies": {
     "express": "^4.16.4",

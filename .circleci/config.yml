@@ -7,7 +7,7 @@ jobs:
     parallelism: 3
     branches:
       only:
-        - master
+        - dev
     steps:
       - checkout
       - attach_workspace:
@@ -15,7 +15,10 @@ jobs:
       - run: rm -rf ./node_modules
       - run: npm i
       - run: npm run build
-      - run: ls
+      - run: git checkout master
+      - run: git add .
+      - run: git push origin master
+      - run: git branch
     staging:
       branch: master
       heroku:
