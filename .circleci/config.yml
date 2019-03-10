@@ -18,6 +18,8 @@ jobs:
       - run: npm i
       - run: npm run build
       - run: git checkout master
+      - run: git config --global user.email "stoler@ya.ru"
+      - run: git config --global user.name "stoler"
       - run: git commit -am "deploy"
       - run: git push origin master
     staging:
