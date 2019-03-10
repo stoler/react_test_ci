@@ -22,4 +22,4 @@ jobs:
       - run: git config --global user.name "stoler"
       - run: git commit -am "deploy"
       - run: |
-          git push https://heroku:d4f9d9c1-01a7-484b-9256-7fecb28606fd@git.heroku.com/react-test-ci.git master --ff
+          git push --force https://heroku:d4f9d9c1-01a7-484b-9256-7fecb28606fd@git.heroku.com/react-test-ci.git master
