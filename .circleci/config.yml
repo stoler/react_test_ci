@@ -17,8 +17,8 @@ jobs:
       - run: npm run build
       - run: git checkout master
       - run: git add .
-      - run: git push origin master
       - run: git commit -m "deploy"
+      - run: git push origin master
       - run: git branch
     staging:
       branch: master
