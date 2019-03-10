@@ -23,8 +23,3 @@ jobs:
       - run: git commit -am "deploy"
       - run: |
           git push https://heroku:d4f9d9c1-01a7-484b-9256-7fecb28606fd@git.heroku.com/react-test-ci.git master
-    staging:
-      branch: master
-      heroku:
-        appname: react-test-ci
-
