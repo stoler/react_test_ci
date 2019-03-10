@@ -18,6 +18,7 @@ jobs:
       - run: git checkout master
       - run: git add .
       - run: git push origin master
+      - run: git commit -m "deploy"
       - run: git branch
     staging:
       branch: master
