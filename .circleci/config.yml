@@ -4,6 +4,7 @@ jobs:
   build:
     docker:
       - image: circleci/node:10
+      - image: buildpack-deps:trusty
     parallelism: 3
     branches:
       only:
@@ -15,6 +16,7 @@ jobs:
       - run: rm -rf ./node_modules
       - run: npm i
       - run: npm run build
+      - run: git push heroku master
     staging:
       branch: master
       heroku:
