@@ -6,7 +6,7 @@ jobs:
       - image: circleci/node:10
     parallelism: 3
     branches:
-      only:
+      ignore:
         - master
     steps:
       - checkout
